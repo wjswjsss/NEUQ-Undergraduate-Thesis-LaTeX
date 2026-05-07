@@ -1,0 +1,58 @@
+\appendix
+\phantomsection\addcontentsline{toc}{mysection}{附\ \ \ \ \ \ \ \ 录}
+\section*{附\ \ \ \ \ \ \ \ 录}
+
+
+\newcommand{\appendixtitle}[1]{\heiti{\centering\paragraph{#1}\mbox{}\\}\songti}
+
+\subsection*{附录A：源程序代码}
+\phantomsection\addcontentsline{toc}{mysubsection}{附录A}
+%取消章节编号，重置计数器
+\counterwithout{lstlisting}{section}
+\setcounter{lstlisting}{0}
+\lstinputlisting[
+    style       =   Python,
+    caption     =   {分词代码},
+    label       =   {lst:qg.py}
+]{code/qg.py}
+\clearpage
+
+
+\subsection*{附录B}
+\phantomsection\addcontentsline{toc}{mysubsection}{附录B}
+\subsubsection*{译文1}
+\appendixtitle{Las Vegas Algorithm}
+In computing, a Las Vegas algorithm is a randomized algorithm that always gives correct results; that is, it always produces the correct result or it informs about the failure. However, the runtime of a Las Vegas algorithm differs depending on the input. The usual definition of a Las Vegas algorithm includes the restriction that the expected runtime be finite, where the expectation is carried out over the space of random information, or entropy, used in the algorithm. An alternative definition requires that a Las Vegas algorithm always terminates (is effective), but may output a symbol not part of the solution space to indicate failure in finding a solution. The nature of Las Vegas algorithms makes them suitable in situations where the number of possible solutions is limited, and where verifying the correctness of a candidate solution is relatively easy while finding a solution is complex.\par
+Systematic search methods for computationally hard problems, such as some variants of the Davis–Putnam algorithm for propositional satisfiability (SAT), also utilize non-deterministic decisions, and can thus also be considered Las Vegas algorithms.\par
+Las Vegas algorithms were introduced by László Babai in 1979, in the context of the graph isomorphism problem, as a dual to Monte Carlo algorithms. Babai introduced the term ``Las Vegas algorithm'' alongside an example involving coin flips: the algorithm depends on a series of independent coin flips, and there is a small chance of failure (no result). However, in contrast to Monte Carlo algorithms, the Las Vegas algorithm can guarantee the correctness of any reported result.\par
+Las Vegas algorithms arise frequently in search problems. For example, one looking for some information online might search related websites for the desired information. The time complexity thus ranges from getting ``lucky'' and finding the content immediately, to being ``unlucky'' and spending large amounts of time. Once the right website is found, then there is no possibility of error.\par
+\clearpage
+
+\subsubsection*{中文译文}
+\appendixtitle{拉斯维加斯算法}
+在计算领域，拉斯维加斯算法是一种总能给出正确结果的随机算法；也就是说，它总能产生正确的结果，或者告知失败。然而，拉斯维加斯算法的运行时间因输入而异。拉斯维加斯算法的通常定义包括一个限制条件，即预期运行时间是有限的，其中预期运行时间是在算法中使用的随机信息空间或熵空间上进行的。另一种定义要求拉斯维加斯算法总是终止（有效），但可能会输出一个不属于解空间的符号，以表示找不到解。拉斯维加斯算法的性质使其适用于可能解的数量有限的情况，以及验证候选解的正确性相对容易而寻找解却很复杂的情况。\par
+计算困难问题的系统搜索方法，如命题可满足性（SAT）的戴维斯-普特南算法（Davis-Putnam algorithm）的一些变体，也利用非确定性决策，因此也可视为拉斯维加斯算法。\par
+拉斯维加斯算法是拉斯洛-巴拜（László Babai）于1979年在图同构问题的背景下提出的，是蒙特卡洛算法的对偶算法。Babai在提出“拉斯维加斯算法”一词的同时，还举出了一个涉及掷硬币的例子：该算法依赖于一系列独立的掷硬币动作，而且有很小的失败几率（没有结果）。然而，与蒙特卡洛算法不同的是，拉斯维加斯算法可以保证任何返回结果的正确性。\par
+拉斯维加斯算法经常出现在搜索问题中。例如，一个人在网上寻找某些信息时，可能会在相关网站上搜索。因此，时间复杂度从“幸运”地立即找到内容到“不幸运”地花费大量时间不等。一旦找到正确的网站，就不可能出错。\par
+
+\clearpage
+
+\subsubsection*{译文2}
+\appendixtitle{Monte Carlo Algorithm}
+In computing, a Monte Carlo algorithm is a randomized algorithm whose output may be incorrect with a certain (typically small) probability. Two examples of such algorithms are the Karger–Stein algorithm and the Monte Carlo algorithm for minimum feedback arc set.\par
+The name refers to the Monte Carlo casino in the Principality of Monaco, which is well-known around the world as an icon of gambling. The term ``Monte Carlo'' was first introduced in 1947 by Nicholas Metropolis.\par
+Las Vegas algorithms are a dual of Monte Carlo algorithms and never return an incorrect answer. However, they may make random choices as part of their work. As a result, the time taken might vary between runs, even with the same input.\par
+If there is a procedure for verifying whether the answer given by a Monte Carlo algorithm is correct, and the probability of a correct answer is bounded above zero, then with probability one, running the algorithm repeatedly while testing the answers will eventually give a correct answer. Whether this process is a Las Vegas algorithm depends on whether halting with probability one is considered to satisfy the definition.\par
+Well-known Monte Carlo algorithms include the Solovay–Strassen primality test, the Baillie–PSW primality test, the Miller–Rabin primality test, and certain fast variants of the Schreier–Sims algorithm in computational group theory.\par
+For algorithms that are a part of Stochastic Optimization (SO) group of algorithms, where probability is not know in advance and is empirically determined, it is sometimes possible to merge Monte Carlo and such an algorithm ``to have both probability bound calculated in advance and a Stochastic Optimization component.'' ``Example of such an algorithm is Ant Inspired Monte Carlo.'' In this way, ``drawback of SO has been mitigated, and a confidence in a solution has been established.''\par
+\clearpage
+\subsection*{中文译文}
+\appendixtitle{蒙特卡洛算法}
+在计算中，蒙特卡洛算法是一种随机算法，其输出可能以一定（通常很小）的概率不正确。这类算法的两个例子是卡格尔-斯泰因算法和最小反馈弧集蒙特卡洛算法。\par
+“蒙特卡洛”这个名字是指摩纳哥公国的蒙特卡洛赌场，它作为赌博的标志而闻名于世。“蒙特卡洛”一词由尼古拉斯-梅特波利斯于 1947 年首次提出。\par
+拉斯维加斯算法是蒙特卡洛算法的对偶，永远不会返回错误答案。不过，它们在工作中可能会做出随机选择。因此，即使输入相同，每次运行所花费的时间也可能不同。\par
+如果有一种程序可以验证蒙特卡洛算法给出的答案是否正确，而且正确答案的概率在零之上有界，那么在概率为一的情况下，反复运行算法并测试答案，最终会给出正确答案。这个过程是否是拉斯维加斯算法，取决于概率为1的停止是否符合定义。\par
+著名的蒙特卡洛算法包括索洛瓦-施特拉森（Solovay-Strassen）素性检验、Baillie-PSW素性检验、米勒-拉宾（Miller-Rabin）素性检验，以及计算群论中Schreier–Sims算法的某些快速变体。\par
+对于属于随机优化（SO）算法组的算法，其概率是事先不知道的，而是根据经验确定的，有时可以将蒙特卡洛算法与这种算法合并，“使其既有事先计算出的概率约束，又有随机优化的成分。”“这种算法的例子是蚂蚁启发蒙特卡洛算法。”通过这种方式，“SO 的缺点得到了缓解，并建立了对解决方案的信心。”\par
+\clearpage
+
